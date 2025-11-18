@@ -13,7 +13,7 @@ function TaskForm({ onAddTask }) {
     const newTask = {
       id: Date.now(),
       name: taskName,
-      pridority: priority,
+      priority: priority,
       completed: false
     }
 

@@ -1,10 +1,9 @@
-function TaskItem() {
-    const priorityColors = {
-        low: 'border-green-500',
-        medium: 'border-yellow-500',
-        high:'border-red-500',
-    };
-
+function TaskItem({ task, onToggle, onDelete }) {
+  const priorityColors = {
+    low: 'border-green-500',
+    medium: 'border-yellow-500',
+    high: 'border-red-500'
+  }
 
   return (
     <div
@@ -18,7 +17,7 @@ function TaskItem() {
           <input
             type="checkbox"
             checked={task.completed}
-            onChange={() => ontoggle(task.id)}
+            onChange={() => onToggle(task.id)}
             className="w-5 h-5 cursor-pointer"
           />
           <span
@@ -49,6 +48,7 @@ function TaskItem() {
                       }`}
         >
           {task.priority}
+          {console.log(task)}
         </span>
 
         {/* Delete Button */}
